@@ -4,7 +4,7 @@ This is a collection of all my dotfiles that I use in my development environment
 All configs need to be sym-linked to their respective locations in your home folder. I will be writing a script to do this automatically in the future.
 
 ## zsh
-The zsh configuration uses the base zshrc file, as well as an alias file and theme file in the zsh directory. The config also uses antigen to manage plugins. It loads the oh-my-zsh framework, theme, and other plugins.
+The zsh configuration uses the base zshrc file, as well as an alias file and theme file in the zsh directory. The config also uses antigen to manage plugins. It loads the oh-my-zsh framework, theme, and other plugins. One of the plugins loaded into the config is scm_breeze, which isn't available on antigen, so it must be installed on it's own. 
 
 ## vim
 The vim configuration relies on pathogen for runtime configuration and vundle to manage plugins. Everything is loaded from the vimrc file.

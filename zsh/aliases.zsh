@@ -11,3 +11,8 @@ alias dotfiles='cd ~/dotfiles'
 
 # Commands
 alias c='clear'
+
+# Git
+alias gfu='git fetch upstream'
+alias gmum='git merge upstream/master'
+alias gpom='git push origin master'
