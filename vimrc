@@ -105,4 +105,16 @@ inoremap {<cr> {<cr>}<c-o>O
 inoremap [<cr> [<cr>]<c-o>O<tab>
 inoremap (<cr> (<cr>)<c-o>O<tab>
 
+:map ` <Nop>
+:map ` :vsp
+:map `1 :sp
+
+:nnoremap <C-j> <C-W><C-J>
+:nnoremap <C-k> <C-W><C-K>
+:nnoremap <C-l> <C-W><C-L>
+:nnoremap <C-h> <C-W><C-H>
+
+:nmap [ :vertical resize +3
+:nmap ] :vertical resize -3
+
 set mouse=a
