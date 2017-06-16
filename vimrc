@@ -1,5 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" => Vundle
+" => Vundle and Pathogen
 """"""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible        
 filetype off 
@@ -91,16 +91,15 @@ let g:syntastic_ruby_checkers=['jruby', 'macruby', 'rubocop', 'rubylint', 'mri']
 let g:syntastic_javascript_checkers=['jshint', 'jsl', 'jslint', 'jsxhint', 'mixedindentlint', 'standard']
 let g:syntastic_java_checkers=['javac', 'checkstyle']
 let g:syntastic_json_checkers=['jsonlint', 'jsonval']
-
-" Lets
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_warning_symbol = "⚠"
-let g:airline_theme = 'dark'
 
-" Idek at this point
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Key Mappings and Mouse Settings 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap {<cr> {<cr>}<c-o>O
 inoremap [<cr> [<cr>]<c-o>O<tab>
 inoremap (<cr> (<cr>)<c-o>O<tab>
