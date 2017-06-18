@@ -1,9 +1,9 @@
 # Config files
-alias zshrc='vim ~/dotfiles/zshrc'
+alias zshrc='vim ~/dotfiles/zsh/zshrc'
 alias aliases='vim ~/dotfiles/zsh/aliases.zsh'
 alias theme='vim ~/dotfiles/zsh/theme.zsh'
-alias vimrc='vim ~/dotfiles/vimrc'
-alias tmuxconf='vim ~/dotfiles/tmux.conf'
+alias vimrc='vim ~/dotfiles/vim/vimrc'
+alias tmuxconf='vim ~/dotfiles/tmux/tmux.conf'
 
 alias reloadzshrc='. ~/.zshrc'
 
