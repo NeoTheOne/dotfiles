@@ -4,6 +4,7 @@ alias aliases='vim ~/dotfiles/zsh/aliases.zsh'
 alias theme='vim ~/dotfiles/zsh/theme.zsh'
 alias vimrc='vim ~/dotfiles/vim/vimrc'
 alias tmuxconf='vim ~/dotfiles/tmux/tmux.conf'
+alias bashprofile='vim ~/dotfiles/bash/bash_profile'
 
 alias reloadzshrc='. ~/.zshrc'
 
