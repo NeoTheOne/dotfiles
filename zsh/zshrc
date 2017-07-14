@@ -1,8 +1,25 @@
 source ~/dotfiles/repos/antigen/antigen.zsh
 source ~/dotfiles/zsh/theme.zsh
 
+# Override Apple's default OpenSSL install
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+# Custom Java version
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export PATH=$PATH:$JAVA_HOME/bin
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# RVM
+export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# SCM_BREEZE
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
+# Alias file
 source ~/dotfiles/zsh/aliases.zsh
 
 antigen use oh-my-zsh
