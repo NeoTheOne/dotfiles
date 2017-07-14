@@ -5,8 +5,9 @@ alias theme='vim ~/dotfiles/zsh/theme.zsh'
 alias vimrc='vim ~/dotfiles/vim/vimrc'
 alias tmuxconf='vim ~/dotfiles/tmux/tmux.conf'
 alias bashprofile='vim ~/dotfiles/bash/bash_profile'
+alias hosts='sudo vim /etc/hosts'
 
-alias reloadzshrc='. ~/.zshrc'
+alias sz='. ~/.zshrc'
 
 # Directories
 alias repo='cd ~/repos'
@@ -26,3 +27,6 @@ alias gfu='git fetch upstream'
 alias gmum='git merge upstream/master'
 alias gpo='git push origin'
 alias gpom='git push origin master'
+
+# Heroku
+alias deploydist='git subtree push --prefix dist heroku master'
