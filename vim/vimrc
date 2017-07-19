@@ -25,6 +25,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/nerdtree'
+Plugin 'posva/vim-vue'
 
 call vundle#end() 
 
