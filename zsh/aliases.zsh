@@ -12,6 +12,11 @@ alias sz='. ~/.zshrc'
 alias repo='cd ~/repos'
 alias repos='cd ~/repos'
 alias dotfiles='cd ~/dotfiles'
+alias dev='cd ~/development'
+alias mamp='cd ~/mamp'
+
+alias openmamp='open ~/mamp'
+alias openserver='open /Users/gabelandau/Documents/RIT/Class\ Files/Current\ Term/Server\ Programming'
 
 # Commands
 alias c='clear'
