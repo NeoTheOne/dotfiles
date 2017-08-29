@@ -34,8 +34,8 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => Tab/Spaces/Keys
 """"""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set backspace=indent,eol,start
 set number
 set expandtab
