@@ -114,6 +114,9 @@ inoremap (<cr> (<cr>)<c-o>O<tab>
 :nnoremap <C-l> <C-W><C-L>
 :nnoremap <C-h> <C-W><C-H>
 
+inoremap jj <esc>
+inoremap jk <esc>
+
 :nmap [ :vertical resize +3
 :nmap ] :vertical resize -3
 
