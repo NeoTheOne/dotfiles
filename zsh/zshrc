@@ -1,16 +1,10 @@
 source ~/dotfiles/repos/antigen/antigen.zsh
 source ~/dotfiles/zsh/theme.zsh
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# SCM_BREEZE
-[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
-
 # Alias file
 source ~/dotfiles/zsh/aliases.zsh
 
+# Antigen
 antigen use oh-my-zsh
 
 antigen bundle git
