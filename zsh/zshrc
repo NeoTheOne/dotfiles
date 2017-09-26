@@ -1,13 +1,17 @@
 ### Load config files
 
-# Config file for antigen
+# Load config file for paths
+source ~/dotfiles/zsh/paths.zsh
+
+# Load config file for aliases
+source ~/dotfiles/zsh/aliases.zsh
+
+# Load config file for antigen
 source ~/dotfiles/repos/antigen/antigen.zsh
 
-# Config file for zsh theme
+# Load config file for zsh theme
 source ~/dotfiles/zsh/theme.zsh
 
-# Config file for aliases
-source ~/dotfiles/zsh/aliases.zsh
 
 ### antigen commands
 
@@ -21,6 +25,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Apply antigen settings
 antigen apply
+
 
 ### Commands to be run after zsh has started
 
