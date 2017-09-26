@@ -1,16 +1,31 @@
+### Load config files
+
+# Config file for antigen
 source ~/dotfiles/repos/antigen/antigen.zsh
+
+# Config file for zsh theme
 source ~/dotfiles/zsh/theme.zsh
 
-# Alias file
+# Config file for aliases
 source ~/dotfiles/zsh/aliases.zsh
 
-# Antigen
+### antigen commands
+
+# Load oh-my-zsh library
 antigen use oh-my-zsh
 
+# Load antigen bundles
 antigen bundle git
 antigen bundle dirhistory
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Apply antigen settings
 antigen apply
 
+### Commands to be run after zsh has started
+
+# Clear the screen
 clear
+
+# Run a neofetch for machine info
+neofetch
