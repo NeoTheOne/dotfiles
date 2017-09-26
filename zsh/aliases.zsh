@@ -1,26 +1,15 @@
 # Config files
-alias zshrc='vim ~/dotfiles/zsh/zshrc'
-alias aliases='vim ~/dotfiles/zsh/aliases.zsh'
-alias theme='vim ~/dotfiles/zsh/theme.zsh'
-alias vimrc='vim ~/dotfiles/vim/vimrc'
-alias tmuxconf='vim ~/dotfiles/tmux/tmux.conf'
-alias bashprofile='vim ~/dotfiles/bash/bash_profile'
-alias hosts='sudo vim /etc/hosts'
-alias sz='. ~/.zshrc'
-
-# Directories
-alias repo='cd ~/repos'
-alias repos='cd ~/repos'
-alias dotfiles='cd ~/dotfiles'
-alias dev='cd ~/development'
+alias zshrc='nano ~/dotfiles/zsh/zshrc'
+alias aliases='nano ~/dotfiles/zsh/aliases.zsh'
+alias tmuxconf='nano ~/dotfiles/tmux/tmux.conf'
+alias bashprofile='nano ~/dotfiles/bash/bash_profile'
+alias hosts='sudo nano /etc/hosts'
 
 # Commands
 alias c='clear'
 alias lla='ll -a'
-
-# Grunt
-alias grd='grunt dev'
-alias grdf='grunt dev --force'
+alias ls='ls -hl --color=auto'
+alias grep='grep --color=auto'
 
 # Git
 alias gfu='git fetch upstream'
