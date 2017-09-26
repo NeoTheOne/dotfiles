@@ -10,7 +10,6 @@ alias hosts='sudo nano /etc/hosts'
 
 # Command aliases
 alias c='clear'
-alias lla='ll -a'
 alias ls='ls -hl --color=auto'
 alias grep='grep --color=auto'
 
