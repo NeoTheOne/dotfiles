@@ -1,27 +1,21 @@
-### zsh config
+#================================
+# zshrc
+#================================
 
 ### Load config files
-
 # Load config file for paths
 source ~/dotfiles/zsh/paths.zsh
-
 # Load config file for antigen
 source ~/dotfiles/zsh/antigen.zsh
-
 # Load config file for aliases
 source ~/dotfiles/zsh/aliases.zsh
-
 # Load config file for key-bindings
 source ~/dotfiles/zsh/key-bindings.zsh
-
 # Load config file for zsh theme
 source ~/dotfiles/zsh/theme.zsh
 
-
 ### Commands to be run after zsh has started
-
 # Clear the screen
 clear
-
 # Run a neofetch for machine info
 neofetch

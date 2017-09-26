@@ -1,5 +1,8 @@
-### Key-bindings for zsh
+#================================
+# zshrc key-binding config
+#================================
 
+### Key-bindings
 # Correct the escape sequence of the delete key on OSx in iTerm2
 if [[ $TERM_PROGRAM ==  "iTerm.app" ]]; then
   bindkey "^[[3~" delete-char
