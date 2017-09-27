@@ -12,4 +12,4 @@ It loads the oh-my-zsh framework, theme, and other plugins.
 The tmux configuration has no dependencies, just the tmux.conf file.
 
 # Installer
-This repo includes a .sh script for symlinking and installing all necessary files. It is a work in progress, do not run it now.
+This repo includes a .sh script for symlinking and installing all necessary files.
