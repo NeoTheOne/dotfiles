@@ -1,17 +1,28 @@
 #!/bin/bash
-#================================
-# Run this script to install configuration files and symlink them to the home directory
-#================================
+#====================================================================================================
+# Run this script to download the repository, install dependencies and symlink the config files
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/NeoTheOne/dotfiles/master/install.sh)"
+#====================================================================================================
 
-### Download dependencies:
-# antigen, make sure brew is installed if you're running OSx
+### Activate sudo
+sudo test 1
+
+### Download & install dependencies:
+# brew(on OSx),zsh, git and antigen
 if [[ $(uname -a) = *Darwin* ]]; then
-  brew install antigen
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install zsh git antigen
 elif [[ $(uname -a) = *Debian* ]]; then
-  sudo apt-get install zsh-antigen
+  sudo apt-get install zsh git zsh-antigen
 elif [[ $(uname -a) = *Ubuntu* ]]; then
-  sudo apt-get install zsh-antigen
+  sudo apt-get install zsh git zsh-antigen
 fi
+
+###Download repository
+git clone https://github.com/NeoTheOne/dotfiles $HOME/dotfiles
+
+### Change shell
+sudo chsh -s /bin/zsh $USER
 
 ### Rename/backup old/default dotfiles
 mv $HOME/.zshrc $HOME/.zshrc_old
