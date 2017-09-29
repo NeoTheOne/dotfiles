@@ -1,6 +1,6 @@
-#================================
+#=========================
 # zshrc key-binding config
-#================================
+#=========================
 
 ### Key-bindings
 # Correct the escape sequence of the delete key on OSx in iTerm2
