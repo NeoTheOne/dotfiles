@@ -16,7 +16,7 @@ function title() {
   a=$(print -Pn "%40>...>$a" | tr -d "\n")
 
   case $a in
-    tmux*|ssh*)
+    tmux*|ssh*|mosh*)
       return
     ;;
     *)
@@ -37,6 +37,14 @@ function ssh() {
     ;;
   esac
   command ssh "$@"
+}
+function mosh() {
+  case $TMUX in
+    *tmux*)
+      tmux rename-window "$*"
+    ;;
+  esac
+  command mosh "$@"
 }
 
 function precmd {
