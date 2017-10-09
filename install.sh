@@ -7,6 +7,9 @@
 ### Activate sudo
 sudo test 1
 
+###Download repository
+git clone https://github.com/NeoTheOne/dotfiles $HOME/dotfiles
+
 ### Download & install dependencies:
 # brew(on OSx),zsh, git and antigen
 if [[ $(uname -a) = *Darwin* ]]; then
@@ -18,11 +21,11 @@ elif [[ $(uname -a) = *Ubuntu* ]]; then
   sudo apt-get install zsh git zsh-antigen
 fi
 
-###Download repository
-git clone https://github.com/NeoTheOne/dotfiles $HOME/dotfiles
-
 ### Change shell
 sudo chsh -s /bin/zsh $USER
+
+### Allow command scripts to be run
+sudo chmod +x $HOME/dotfiles/commands/*
 
 ### Rename/backup old/default dotfiles
 mv $HOME/.zshrc $HOME/.zshrc_old
