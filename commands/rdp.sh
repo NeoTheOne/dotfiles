@@ -5,7 +5,7 @@
 
 rdpTemplateFile=$HOME/dotfiles/rdp/template.rdp
 rdpTempRDP=$TMPDIR/t.rdp
-rdpRunCommand="/Applications/Remote Desktop Connection.app/Contents/MacOS/Remote Desktop Connection"
+rdpRunCommand="/Applications/Microsoft Remote Desktop.app/Contents/MacOS/Microsoft Remote Desktop"
 rdpHost=${1}
 
 if [ "${2}" = "/console" ] ; then
@@ -25,6 +25,6 @@ fi
 
 cp -f ${rdpTemplateFile} ${rdpTempRDP}
 
-sed -i '' "s|zzxyzyz|${rdpHost}|g" ${rdpTempRDP}
+sed -i "s|zzxyzyz|${rdpHost}|g" ${rdpTempRDP}
 
-open -na "${rdpRunCommand}" --args ${rdpTempRDP}
+open -na "${rdpRunCommand}" ${rdpTempRDP}
