@@ -17,7 +17,7 @@ echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCewwT2lmMoVJ8SmKkV7rZeYc6PRT4Pq4U2Gs
 chmod 644 $HOME/.ssh/authorized_keys
 
 ### Download & install dependencies:
-# brew(on OSx), neofetch(on OSx), zsh, git, antigen, tmux and screenfetch
+# brew(on OSx), zsh, tmux, git, antigen and neofetch
 if [[ $(uname -a) = *Darwin* ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update
