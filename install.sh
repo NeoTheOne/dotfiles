@@ -9,8 +9,10 @@
 sudo test 1
 
 ### Add public SSH key
-mkdir $HOME/.ssh
-chmod 700 $HOME/.ssh
+if [ ! -d $HOME/.ssh ]; then
+  mkdir $HOME/.ssh
+  chmod 700 $HOME/.ssh
+fi
 echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCewwT2lmMoVJ8SmKkV7rZeYc6PRT4Pq4U2Gs94P130n9jdrS9hrRj2HbuAsfUqholJ0Y2S89boNa13QuRs8dzTECkIsk2fU0BH+LcaZR9QrN4V0Xa2EF63E8E6WBB8AFkQ2TubBd6C15N+cQ4vthHATbBkFyJxgH/dlnAOtHvyGp6H7o9wbv2WFrcq5OqnI46ikn68CmLSTOEv5T3SeXq4vPb52zgQYVdF2dKyMLtxbB+vumTIcUVV5NIRyA4+f8nMSj/4wQsfx6teSKUtbpRaZNwWyroRwituDSAd2FiKzswgncSLR1x9OA/TCYuJRElgpomLSHCOQD2YxzK2fo5S3QXKWGxSeJaPhkrmSlgJ+AI0YoRF0kAophbuhk671tHlJyACWnsdtbCPQvnleBt8a4YfJKKbFHuIv+5b3QZ3xQdogR5Z3gGlbTfbc7hNAQeGlhmXRnqQYnEymI98maHquXw3plVrB2IOgQQk3N6l4VpWNW03gf+M9CT+c+rlTJdFzln5/kIsybhnHyr+LspBj0Lv5/flSIU322IVDz14URb2RQmgjAOi6ut8E6mFfA2X2y1qymFm2qoe78osT9rzFOObAol6SjNBNN74aOdi5myvgbbo11dwgOwthgTjgRGe+M7pwa0QFgjQ0PvCTMvkel4KSqSMl8qAV8Q3fKOn5Q== charlie.skog@gmail.com' > $HOME/.ssh/authorized_keys
 chmod 644 $HOME/.ssh/authorized_keys
 
