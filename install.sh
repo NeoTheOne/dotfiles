@@ -21,10 +21,11 @@ if [[ $(uname -a) = *Darwin* ]]; then
   brew install zsh tmux git antigen neofetch
 elif [[ $(uname -a) = *Debian* ]]; then
   sudo apt-get update
-  sudo apt-get install zsh tmux git zsh-antigen screenfetch
+  sudo apt-get install zsh tmux git zsh-antigen neofetch
 elif [[ $(uname -a) = *Ubuntu* ]]; then
+  sudo add-apt-repository ppa:dawidd0811/neofetch
   sudo apt-get update
-  sudo apt-get install zsh tmux git zsh-antigen screenfetch
+  sudo apt-get install zsh tmux git zsh-antigen neofetch
 fi
 
 ### Download dotfiles repo

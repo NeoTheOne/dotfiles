@@ -25,7 +25,7 @@ clear
 if [[ $(uname -a) = *Darwin* ]]; then
   neofetch
 elif [[ $(uname -a) = *Debian* ]]; then
-  screenfetch
+  neofetch
 elif [[ $(uname -a) = *Ubuntu* ]]; then
-  screenfetch
+  neofetch
 fi
