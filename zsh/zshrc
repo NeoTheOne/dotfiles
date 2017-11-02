@@ -22,4 +22,10 @@ source ~/dotfiles/zsh/theme.zsh
 # Clear the screen
 clear
 # Run a neofetch for machine info
-neofetch
+if [[ $(uname -a) = *Darwin* ]]; then
+  neofetch
+elif [[ $(uname -a) = *Debian* ]]; then
+  screenfetch
+elif [[ $(uname -a) = *Ubuntu* ]]; then
+  screenfetch
+fi
