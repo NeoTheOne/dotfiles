@@ -24,6 +24,9 @@ elif [[ $(uname -a) = *Ubuntu* ]]; then
   sudo apt-get install zsh git zsh-antigen
 fi
 
+### Download dotfiles repo
+git clone https://github.com/NeoTheOne/dotfiles $HOME/dotfiles
+
 ### Change shell
 sudo chsh -s /bin/zsh $USER
 
