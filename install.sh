@@ -14,14 +14,17 @@ echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCewwT2lmMoVJ8SmKkV7rZeYc6PRT4Pq4U2Gs
 chmod 644 $HOME/.ssh/authorized_keys
 
 ### Download & install dependencies:
-# brew(on OSx), neofetch(on OSx), zsh, git, antigen and screenfetch
+# brew(on OSx), neofetch(on OSx), zsh, git, antigen, tmux and screenfetch
 if [[ $(uname -a) = *Darwin* ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew install zsh git antigen neofetch
+  brew update
+  brew install zsh tmux git antigen neofetch
 elif [[ $(uname -a) = *Debian* ]]; then
-  sudo apt-get install zsh git zsh-antigen screenfetch
+  sudo apt-get update
+  sudo apt-get install zsh tmux git zsh-antigen screenfetch
 elif [[ $(uname -a) = *Ubuntu* ]]; then
-  sudo apt-get install zsh git zsh-antigen screenfetch
+  sudo apt-get update
+  sudo apt-get install zsh tmux git zsh-antigen screenfetch
 fi
 
 ### Download dotfiles repo
