@@ -28,4 +28,6 @@ elif [[ $(uname -a) = *Debian* ]]; then
   neofetch
 elif [[ $(uname -a) = *Ubuntu* ]]; then
   neofetch
+elif [[ $(uname -a) = *ARCH* ]]; then
+  neofetch
 fi
