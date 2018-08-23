@@ -29,6 +29,9 @@ elif [[ $(uname -a) = *Ubuntu* ]]; then
   sudo add-apt-repository ppa:dawidd0811/neofetch
   sudo apt-get update
   sudo apt-get install zsh tmux git zsh-antigen neofetch
+elif [[ $(uname -a) = *ARCH* ]]; then
+  sudo pacman -Sy aurman
+  aurman -S zsh tmux git antigen-git neofetch
 fi
 
 ### Download dotfiles repo
