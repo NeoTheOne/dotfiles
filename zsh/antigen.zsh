@@ -10,6 +10,8 @@ elif [[ $(uname -a) = *Debian* ]]; then
   source /usr/share/zsh-antigen/antigen.zsh
 elif [[ $(uname -a) = *Ubuntu* ]]; then
   source /usr/share/zsh-antigen/antigen.zsh
+elif [[ $(uname -a) = *ARCH* ]]; then
+  source /usr/share/zsh/share/antigen.zsh
 fi
 
 ### Load libraries
