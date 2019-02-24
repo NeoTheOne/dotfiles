@@ -8,14 +8,6 @@
 ### Activate sudo
 sudo test 1
 
-### Add public SSH key
-if [ ! -d $HOME/.ssh ]; then
-  mkdir $HOME/.ssh
-  chmod 700 $HOME/.ssh
-fi
-echo 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAyESMExxPtdBDtoaQLJFkWcf/bfRE4N4x4VB3ShAiJPQuKysfGt+BideDvLGqO3+VovqpXCgFWKdFNZob3HhhJE2qitDjhwMAgIo1Ad/thULvAuleZU4fWwQ+IAmJAaSkRSpX+gq/f4G0DQfSBwWGhLRUfA7/KkW8TNIofoiSeqM/kOPGbMAZHMO4mEGEGpIUtJY762gEX/v1VeKrWZYx6bFlhO9UPOLiLVVPjztF33CyaVNiNy8Lt3RY/3csqZNUhXE0+RhGDocTwmHgyHG4s6xI0U8tfJ+psD3fXfL3+8slR1l3x08atPuZApUeRoNdqPtwvOa5zjkSfDW19AhJ3w== charlie.skog@gmail.com' > $HOME/.ssh/authorized_keys
-chmod 644 $HOME/.ssh/authorized_keys
-
 ### Download & install dependencies:
 # brew(on OSx), zsh, tmux, git, antigen and neofetch
 if [[ $(uname -a) = *Darwin* ]]; then
