@@ -26,10 +26,8 @@ elif [[ $(uname -a) = *ARCH* ]]; then
   sudo pacman -R grml-zsh-config
   aurman -S tmux git zsh-git neofetch
 fi
-if [ ! -e "~/.antigen/antigen.zsh" ]; then
-  mkdir ~/.antigen
-  curl -L git.io/antigen > ~/.antigen/antigen.zsh
-fi
+mkdir ~/.antigen
+curl -L git.io/antigen > ~/.antigen/antigen.zsh
 
 ### Download dotfiles repo
 git clone https://github.com/NeoTheOne/dotfiles $HOME/dotfiles
