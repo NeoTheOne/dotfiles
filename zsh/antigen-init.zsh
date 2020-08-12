@@ -3,16 +3,12 @@
 #===================
 
 ### Load antigen
-# Determine OS and launch antigen
-if [[ $(uname -a) = *Darwin* ]]; then
-  source /usr/local/opt/antigen/share/antigen/antigen.zsh
-elif [[ $(uname -a) = *Debian* ]]; then
-  source /usr/share/zsh-antigen/antigen.zsh
-elif [[ $(uname -a) = *Ubuntu* ]]; then
-  source /usr/share/zsh-antigen/antigen.zsh
-elif [[ $(uname -a) = *ARCH* ]]; then
-  source /usr/share/zsh/share/antigen.zsh
+# Check for antigen, download it if it doesn't exist and then launch it.
+if [ ! -e "~/.antigen/antigen.zsh" ]; then
+  mkdir ~/.antigen
+  curl -L git.io/antigen > ~/.antigen/antigen.zsh
 fi
+source ~/.antigen/antigen.zsh
 
 ### Load libraries
 # Load oh-my-zsh library
