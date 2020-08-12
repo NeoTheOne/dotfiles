@@ -3,11 +3,6 @@
 #===================
 
 ### Load antigen
-# Check for antigen, download it if it doesn't exist and then launch it.
-if [ ! -e "~/.antigen/antigen.zsh" ]; then
-  mkdir ~/.antigen
-  curl -L git.io/antigen > ~/.antigen/antigen.zsh
-fi
 source ~/.antigen/antigen.zsh
 
 ### Load libraries
