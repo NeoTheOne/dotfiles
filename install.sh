@@ -79,4 +79,4 @@ ln -s $HOME/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/neofetch/config $HOME/.config/neofetch/config
 
 ### Restart to apply changes to wm terminals
-sudo shutdown -r now
+#sudo shutdown -r now
