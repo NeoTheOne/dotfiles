@@ -1,6 +1,6 @@
-#=====================
-# zshrc antigen config
-#=====================
+#===================
+# zshrc antigen init
+#===================
 
 ### Load antigen
 # Determine OS and launch antigen
