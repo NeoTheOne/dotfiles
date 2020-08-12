@@ -13,18 +13,18 @@ sudo test 1
 if [[ $(uname -a) = *Darwin* ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update
-  brew install zsh tmux git antigen neofetch
+  brew install zsh tmux git neofetch
 elif [[ $(uname -a) = *Debian* ]]; then
   sudo apt-get update
-  sudo apt-get install zsh tmux git zsh-antigen neofetch
+  sudo apt-get install zsh tmux git neofetch
 elif [[ $(uname -a) = *Ubuntu* ]]; then
   sudo add-apt-repository ppa:dawidd0811/neofetch
   sudo apt-get update
-  sudo apt-get install zsh tmux git zsh-antigen neofetch
+  sudo apt-get install zsh tmux git neofetch
 elif [[ $(uname -a) = *ARCH* ]]; then
   sudo pacman -Sy aurman
   sudo pacman -R grml-zsh-config
-  aurman -S tmux git zsh-git antigen-git neofetch
+  aurman -S tmux git zsh-git neofetch
 fi
 
 ### Download dotfiles repo
