@@ -20,6 +20,7 @@ elif [[ $(uname -a) = *Debian* ]]; then
 elif [[ $(uname -a) = *Ubuntu* ]]; then
   sudo apt-get update
   sudo apt-get install zsh tmux git neofetch
+  locale-gen en_US.UTF-8
 elif [[ $(uname -a) = *ARCH* ]]; then
   sudo pacman -Sy aurman
   sudo pacman -R grml-zsh-config
