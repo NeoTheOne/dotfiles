@@ -69,12 +69,26 @@ if [ ! -d $HOME/.config/neofetch ]; then
   fi
   mkdir $HOME/.config/neofetch
 fi
+if [ -f $HOME/.ssh/authorized_keys ]; then
+  if [ ! -d $HOME/.old ]; then
+    mkdir $HOME/.old
+  fi
+  mv $HOME/.ssh/authorized_keys $HOME/.old/authorized_keys_old
+fi
+if [ ! -d $HOME/.ssh ]; then
+  mkdir $HOME/.ssh
+  chmod 700 $HOME/.ssh
+fi
 
 ### Symlinks
 ln -s $HOME/dotfiles/zsh/zshrc $HOME/.zshrc
 ln -s $HOME/dotfiles/bash/bash_profile $HOME/.bash_profile
 ln -s $HOME/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/neofetch/config $HOME/.config/neofetch/config
+ln -s $HOME/dotfiles/ssh/authorized_keys $HOME/.ssh/authorized_keys
+
+### Authorized Keys permissions
+chmod 600 $HOME/.ssh/authorized_keys
 
 ### Restart to apply changes to wm terminals
 #sudo shutdown -r now
