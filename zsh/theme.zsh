@@ -51,7 +51,7 @@ function precmd {
   if [ $? -eq 0 ]; then
     RPROMPT="( ˃ ヮ˂)"
   else
-    RPROMPT="(◞ ‸ ◟ㆀ)"
+    RPROMPT="(｡-人-｡)"
   fi
 
   title "zsh" "%m(%55<...<%~)"
