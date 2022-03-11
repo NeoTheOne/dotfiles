@@ -25,6 +25,10 @@ elif [[ $(uname -a) = *PVE* ]]; then
   sudo apt-get update
   sudo apt-get install zsh tmux git neofetch
   sudo locale-gen en_US.UTF-8
+elif [[ $(uname -a) = *WSL2* ]]; then
+  sudo apt-get update
+  sudo apt-get install zsh tmux git neofetch
+  sudo locale-gen en_US.UTF-8
 elif [[ $(uname -a) = *ARCH* ]]; then
   sudo pacman -Sy aurman
   sudo pacman -R grml-zsh-config
