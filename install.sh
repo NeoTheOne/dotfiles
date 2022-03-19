@@ -25,7 +25,7 @@ elif [[ $(uname -a) = *PVE* ]]; then
   sudo apt-get update
   sudo apt-get install zsh tmux git neofetch
   sudo locale-gen en_US.UTF-8
-elif [[ $(uname -a) = *WSL2* ]]; then
+elif [[ $(uname -a) = *WSL* ]]; then
   sudo apt-get update
   sudo apt-get install zsh tmux git neofetch
   sudo locale-gen en_US.UTF-8
