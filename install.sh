@@ -11,7 +11,7 @@ sudo test 1
 ### Download & install dependencies:
 # brew(on OSx), zsh, tmux, git, antigen and neofetch
 if [[ $(uname -a) = *Darwin* ]]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   brew update
   brew install zsh tmux git neofetch
 elif [[ $(uname -a) = *Debian* ]]; then
