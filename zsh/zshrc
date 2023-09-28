@@ -8,15 +8,15 @@ export LANG=en_US.UTF-8
 
 ### Load config files
 # Load config file for paths
-source ~/dotfiles/zsh/paths.zsh
+source ~/.dotfiles/zsh/paths.zsh
 # Load config file for antigen
-source ~/dotfiles/zsh/antigen-init.zsh
+source ~/.dotfiles/zsh/antigen-init.zsh
 # Load config file for aliases
-source ~/dotfiles/zsh/aliases.zsh
+source ~/.dotfiles/zsh/aliases.zsh
 # Load config file for key-bindings
-source ~/dotfiles/zsh/key-bindings.zsh
+source ~/.dotfiles/zsh/key-bindings.zsh
 # Load config file for zsh theme
-source ~/dotfiles/zsh/theme.zsh
+source ~/.dotfiles/zsh/theme.zsh
 
 ### Commands to be run after zsh has started
 # Clear the screen
