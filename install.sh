@@ -38,13 +38,13 @@ mkdir ~/.antigen
 curl -L git.io/antigen > ~/.antigen/antigen.zsh
 
 ### Download dotfiles repo
-git clone https://github.com/NeoTheOne/dotfiles $HOME/dotfiles
+git clone https://github.com/NeoTheOne/dotfiles $HOME/.dotfiles
 
 ### Change shell
 sudo chsh -s /bin/zsh $USER
 
 ### Allow command scripts to be run
-sudo chmod +x $HOME/dotfiles/commands/*
+sudo chmod +x $HOME/.dotfiles/commands/*
 
 ### Rename/backup old/default dotfiles and create directories for the new ones
 if [ -f $HOME/.zshrc ]; then
@@ -89,11 +89,11 @@ if [ ! -d $HOME/.ssh ]; then
 fi
 
 ### Symlinks
-ln -s $HOME/dotfiles/zsh/zshrc $HOME/.zshrc
-ln -s $HOME/dotfiles/bash/bash_profile $HOME/.bash_profile
-ln -s $HOME/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
-ln -s $HOME/dotfiles/neofetch/config $HOME/.config/neofetch/config
-ln -s $HOME/dotfiles/ssh/authorized_keys $HOME/.ssh/authorized_keys
+ln -s $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
+ln -s $HOME/.dotfiles/bash/bash_profile $HOME/.bash_profile
+ln -s $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
+ln -s $HOME/.dotfiles/neofetch/config $HOME/.config/neofetch/config
+ln -s $HOME/.dotfiles/ssh/authorized_keys $HOME/.ssh/authorized_keys
 
 ### Authorized Keys permissions
 chmod 600 $HOME/.ssh/authorized_keys
