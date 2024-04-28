@@ -3,7 +3,7 @@
 # Microsoft Remote Desktop OSx terminal script
 #=============================================
 
-rdpTemplateFile=$HOME/dotfiles/rdp/template.rdp
+rdpTemplateFile=$HOME/.dotfiles/rdp/template.rdp
 rdpTempRDP=$TMPDIR/t.rdp
 rdpRunCommand="/Applications/Microsoft Remote Desktop.app/Contents/MacOS/Microsoft Remote Desktop"
 rdpHost=${1}
