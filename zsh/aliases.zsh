@@ -16,7 +16,7 @@ alias c='clear'
 alias ls='ls -hl --color=auto'
 alias grep='grep --color=auto'
 if [[ $(uname -a) = *Darwin* ]]; then
-  alias rdp=~/dotfiles/commands/rdp.sh
+  alias rdp=~/.dotfiles/commands/rdp.sh
 elif [[ $(uname -a) = *Debian* ]]; then
 elif [[ $(uname -a) = *Ubuntu* ]]; then
 fi
