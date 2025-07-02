@@ -9,7 +9,7 @@
 sudo test 1
 
 ### Download & install dependencies:
-# brew(on OSx), zsh, tmux, git, antigen and neofetch
+# brew(on OSx), zsh, tmux, git, antigen, neofetch and fastfetch(on Arch and EndeavourOS)
 if [[ $(uname -a) = *Darwin* ]]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   brew update
@@ -30,9 +30,12 @@ elif [[ $(uname -a) = *WSL* ]]; then
   sudo apt-get install zsh tmux git neofetch
   sudo locale-gen en_US.UTF-8
 elif [[ $(uname -a) = *ARCH* ]]; then
-  sudo pacman -Sy aurman
+  sudo pacman -Sy yay
   sudo pacman -R grml-zsh-config
-  aurman -S tmux git zsh-git neofetch
+  yay -S zsh tmux git fastfetch --noconfirm --answerdiff=None --answeredit=None
+elif [[ $(cat /etc/os-release) = *EndeavourOS* ]]; then
+  sudo pacman -R grml-zsh-config
+  yay -S zsh tmux git fastfetch --noconfirm --answerdiff=None --answeredit=None
 fi
 mkdir ~/.antigen
 curl -L git.io/antigen > ~/.antigen/antigen.zsh
@@ -77,6 +80,18 @@ if [ ! -d $HOME/.config/neofetch ]; then
   fi
   mkdir $HOME/.config/neofetch
 fi
+if [ -f $HOME/.config/fastfetch/config.jsonc ]; then
+  if [ ! -d $HOME/.old ]; then
+    mkdir $HOME/.old
+  fi
+  mv $HOME/.config/fastfetch/config.jsonc $HOME/.old/config.jsonc_old
+fi
+if [ ! -d $HOME/.config/fastfetch ]; then
+  if [ ! -d $HOME/.config ]; then
+    mkdir $HOME/.config
+  fi
+  mkdir $HOME/.config/fastfetch
+fi
 if [ -f $HOME/.ssh/authorized_keys ]; then
   if [ ! -d $HOME/.old ]; then
     mkdir $HOME/.old
@@ -93,6 +108,7 @@ ln -s $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
 ln -s $HOME/.dotfiles/bash/bash_profile $HOME/.bash_profile
 ln -s $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $HOME/.dotfiles/neofetch/config $HOME/.config/neofetch/config
+ln -s $HOME/.dotfiles/fastfetch/config.jsonc $HOME/.config/fastfetch/config.jsonc
 ln -s $HOME/.dotfiles/ssh/authorized_keys $HOME/.ssh/authorized_keys
 
 ### Authorized Keys permissions

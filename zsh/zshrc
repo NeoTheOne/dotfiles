@@ -34,5 +34,7 @@ elif [[ $(uname -a) = *Ubuntu* ]]; then
 elif [[ $(uname -a) = *PVE* ]]; then
   neofetch
 elif [[ $(uname -a) = *ARCH* ]]; then
-  neofetch
+  fastfetch
+elif [[ $(cat /etc/os-release) = *EndeavourOS* ]]; then
+  fastfetch
 fi
